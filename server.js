@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000
 // for debug logging 
 const rowdyResults = rowdy.begin(app)
 // cross origin resource sharing 
-app.use(cors())
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 // request body parsing
 app.use(express.json())
 
